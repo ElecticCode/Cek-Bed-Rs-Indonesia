@@ -131,8 +131,10 @@
                                                 </div>
                                                 <div class="col-6 buttonInformasiRight">
                                                     <form action="../Details Rumah Sakit/DetailsRumahSakit.php" method="get">
+                                                        <input type="hidden" value="<?php echo $kodeProv ?>" name="provinsi">
+                                                        <input type="hidden" value="<?php echo $kodeKota ?>" name="kota">
                                                         <input type="hidden" value="<?php echo $dataHospital[$i]['id'] ?>" name="idRumahSakit">
-                                                        <input type="hidden" value="<?php echo $type ?>" name="covidOrNonCovid">
+                                                        <input type="hidden" value="<?php echo $type ?>" name="type">
                                                         <button type="submit" class="buttonHospitalInformation">
                                                             <a class="linkDetails">Details</a>
                                                         </button>    
@@ -205,9 +207,10 @@
                                                 </div>
                                                 <div class="col-6 buttonInformasiRight">
                                                     <form action="../Details Rumah Sakit/DetailsRumahSakit.php" method="get">
-                                                        <input type="hidden" value="<?php echo $dataHospital[$i]['name'] ?>" name="namaRS">
+                                                        <input type="hidden" value="<?php echo $kodeProv ?>" name="provinsi">
+                                                        <input type="hidden" value="<?php echo $kodeKota ?>" name="kota">
                                                         <input type="hidden" value="<?php echo $dataHospital[$i]['id'] ?>" name="idRumahSakit">
-                                                        <input type="hidden" value="<?php echo $type ?>" name="covidOrNonCovid">
+                                                        <input type="hidden" value="<?php echo $type ?>" name="type">
                                                         <button type="submit" class="buttonHospitalInformation">
                                                             <a>Details</a>
                                                         </button>    
