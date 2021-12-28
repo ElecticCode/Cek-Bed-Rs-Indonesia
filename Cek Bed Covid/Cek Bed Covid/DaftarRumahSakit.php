@@ -42,7 +42,7 @@
 
         <main>
             <div id="daftarRumahSakit">
-                <div class="container" style="border: 1px solid black">
+                <div class="container">
                     <div class="daftarRumahSakit-content row">
                         <div class="navInformation">
                             <h1 class="daftarRumahSakit-title">Daftar Rumah Sakit</h1>
@@ -134,7 +134,7 @@
                                                         <input type="hidden" value="<?php echo $dataHospital[$i]['id'] ?>" name="idRumahSakit">
                                                         <input type="hidden" value="<?php echo $type ?>" name="covidOrNonCovid">
                                                         <button type="submit" class="buttonHospitalInformation">
-                                                            <a>Details</a>
+                                                            <a class="linkDetails">Details</a>
                                                         </button>    
                                                     </form>
                                                 </div>

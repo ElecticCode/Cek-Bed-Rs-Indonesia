@@ -107,6 +107,10 @@ body {
     font-weight: 500;
 }
 
+.linkDetails {
+    font-weight: 500;
+}
+
 .card-text .info {
     margin-left: 2.15em;
 }
@@ -144,6 +148,9 @@ body {
     }
     .card {
         margin: 0.5em 2em;
+    }
+    .buttonBacktoSearch {
+        margin-left: 3rem;
     }
 }
 @media only screen and (max-width: 768px) {
