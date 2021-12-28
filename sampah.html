@@ -1,0 +1,83 @@
+<div id="GetLocation">
+    <div class="container GetLocation-Form-Container">
+        <p>Sistem Informasi Bed Rumah Sakit</p>
+        <p>Pilih Lokasi Pengecekkan</p>
+        <form action="tes.php" method="post">
+            <div class="radio-container">
+                <div class='radio-container'>
+                    <input name='type' type='radio' value='1'>
+                    <label for='Covid-Option'>Covid</label>
+                    <input name='type' type='radio' value='2'>
+                    <label for='NonCovid-Option'>Non-Covid</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="provinsi">Select Provinsi</label>
+                <select class="selectOption" name="provinsi" id="provinsi" onchange="getKota(this.value)"
+                    require="require">
+                    <option value="">Select Provinsi</option>
+                    <?php 
+                                for ($i=0; $i < count($dataProvinsi); $i++) { ?>
+                    <option value='<?php echo $dataProvinsi[$i][' id']?>'>
+                        <?php echo $dataProvinsi[$i]['name'] ?>
+                    </option>
+                    <?php }
+                            ?>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="kota">Select Kota</label>
+                <br>
+                <select class="selectOption" name="kota" id="kota" require="require">
+                    <option value="">Select Kota</option>
+                </select>
+            </div>
+            <button type="submit">kirimkan</button>
+        </form>
+    </div>
+</div>
+
+<!-- <div id="GetLocation">
+            <div class="GetLocation-container">
+                <h1 class="GetLocation-Titlte">
+                    Cek Ketersediaan Tempat Tidur
+                    <br>Rumah Sakit
+                </h1>
+                <form action="tes.php" method="post">
+                    <div class="radio-container">
+                        <div class='radio-container'>
+                            <input name='type' type='radio' value='1'>
+                            <label for='Covid-Option'>Covid</label>
+                            <input name='type' type='radio' value='2'>
+                            <label for='NonCovid-Option'>Non-Covid</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="provinsi">Select Provinsi</label>
+                        <select
+                            class="selectOption"
+                            name="provinsi"
+                            id="provinsi"
+                            onchange="getKota(this.value)"
+                            require="require">
+                            <option value="">Select Provinsi</option>
+                            <?php 
+                                for ($i=0; $i < count($dataProvinsi); $i++) { ?>
+                            <option value='<?php echo $dataProvinsi[$i][' id']?>'>
+                                <?php echo $dataProvinsi[$i]['name'] ?>
+                            </option>
+                            <?php }
+                            ?>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="kota">Select Kota</label>
+                        <br>
+                        <select class="selectOption" name="kota" id="kota" require="require">
+                            <option value="">Select Kota</option>
+                        </select>
+                    </div>
+                    <button type="submit">kirimkan</button>
+                </form>
+            </div>
+        </div> -->
