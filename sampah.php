@@ -1,86 +1,89 @@
 <?php 
-    include '../../configData.php';
-    $kodeProv = $_GET['provinsi'];
-    $kodeKota = $_GET['kota'];
-    $type = $_GET['type'];
-    $dataHospital = getListHospital($kodeProv,$kodeKota,$type);
+    include "../../configData.php";
+    $idRS = $_GET['idRumahSakit'];
+    $type = $_GET['covidOrNonCovid'];
 
-    $dataProvinsi = getProv();
-
-    $getInformasiProvinsi = getInformasiProvinsi($kodeProv);
-    $getInformasiKota = getInformasiKota($kodeProv,$kodeKota);
+    $dataDetails = getDetailRS($idRS,$type);
 ?>
+
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- font-awsome -->
-        <script src="https://kit.fontawesome.com/a7fb2d6a5a.js" crossorigin="anonymous"></script>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Bootstrap CSS -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-            crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-        <title>Daftar Rumah Sakit</title>
+    <title>Detail Rumah Sakit</title>
+</head>
 
-        <!-- link css bed covid -->
-        <link rel="stylesheet" href="DaftarRumahSakit.css">
+<body>
 
-        <!-- Fontawesome CSS -->
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    </head>
-    <body>
+    <div id="navbarLocation">
 
-        <main>
-            <div id="daftarRumahSakit">
-                <div class="container" style="border: 1px solid black">
-                    <div class="daftarRumahSakit-content row">
-                        <div class="navInformation">
-                            <h1 class="daftarRumahSakit-title">Daftar Rumah Sakit</h1>
-                            <?php if ($type == 1) { ?>
-                                <h6 class="daftarRumahSakit-locationInfo">
-                                    Menampilkan Bed Covid untuk Provinsi <?php echo $getInformasiProvinsi ?>, Kota <?php echo $getInformasiKota ?>
-                                </h6> 
-                            <?php } else { ?>
-                                <h6 class="daftarRumahSakit-locationInfo">
-                                    Menampilkan Bed Non-Covid untuk Provinsi <?php echo $getInformasiProvinsi ?>, Kota <?php echo $getInformasiKota ?>
-                                </h6> 
-                            <?php } ?>  
-                        </div>
-                        <button class="buttonBacktoSearch">
-                            <a href="../Get Location Option/GetLocation.php">Cari Rumah Sakit Lokasi Lain</a>
-                        </button>
-                        <div id="daftarRumahSakit">
-                            <?php 
-                                if ($type==1) { ?>
-                                <?php
-                                        for ($i=0; $i < count($dataHospital); $i++) { 
-                                ?>
-                                <div class="card">
-                                    <div class="card-body row">
-                                        <div class="col-md-8">
-                                            <h5 class="hospitalName">
-                                                <?php echo $dataHospital[$i]['name']; ?>
-                                            </h5>
-                                            <h6 class="hospitalAddress">
-                                                <?php echo $dataHospital[$i]['address']; ?>
-                                            </h6>
-                                            <h6 class="infoUpdate">
-                                            <?php
-                                                echo $dataHospital[$i]['info'];
+    </div>
+
+    <main>
+        <div id="daftarRumahSakit">
+            <div class="container" style="border: 1px solid black">
+                <div class="daftarRumahSakit-content row">
+                    <button class="buttonBacktoSearch">
+                        <a href="../Cek Bed Covid/DaftarRumahSakit.php">Kembali ke Daftar Rumah Sakit</a>
+                    </button>
+                    <div id="daftarRumahSakit">
+                        <div class="card">
+                            <div class="card-body row">
+                                <div class="col-md-8">
+                                    <h5 class="hospitalName">
+                                        <?php echo $dataDetails['name']; ?>
+                                    </h5>
+                                    <h6 class="hospitalAddress">
+                                        <?php echo $dataDetails['address']; ?>
+                                    </h6>
+                                    <h6 class="infoUpdate">
+                                        <?php
+                                                echo $dataDetails['phone'];
                                             ?>
-                                            </h6>
-                                        </div>
-                                        <div class="col-md-4 row1-rightSide">
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body row">
+                                <div class="col-md-8">
+                                    <?php
+                                                    for ($i=0; $i < count($dataDetails['bedDetail']); $i++) { 
+                                                ?>
+                                    <h6 class="time">
+                                        Update terakhir :
+                                        <?php echo $dataDetails['bedDetail'][$i]['time']; ?>
+                                    </h6>
+                                    <h5 class="infoKelas">
+                                        <?php echo $dataDetails['bedDetail'][$i]['stats']['title']; ?>
+                                    </h5>
+                                    <h6>
+                                        Kasur yang disediakan :
+                                        <?php echo $dataDetails['bedDetail'][$i]['stats']['bed_available']; ?>
+                                    </h6>
+                                    <h6>
+                                        Kasur yang kosong :
+                                        <?php echo $dataDetails['bedDetail'][$i]['stats']['bed_empty']; ?>
+                                    </h6>
+                                    <h6>
+                                        Antrian :
+                                        <?php echo $dataDetails['bedDetail'][$i]['stats']['queue']; ?>
+                                    </h6>
+                                    <?php
+                                                    }?>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-md-4 row1-rightSide">
                                             <?php 
                                                 $availabel = $dataHospital[$i]['bed_availability'];
                                                 if ($availabel > 0) { ?>
@@ -142,15 +145,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- Punya for $datahospital -->
-                                <?php 
-                                        }
-                                ?>
-                                <!-- punya else if  -->
-                            <?php } else { ?>
-                                <?php 
-                                    for ($i=0; $i < count($dataHospital); $i++) { ?>
                                 <div class="card">
                                     <div class="card-body row">
                                         <div class="col-8">
@@ -204,36 +198,27 @@
                                                     </button>
                                                 </div>
                                                 <div class="col-6 buttonInformasiRight">
-                                                    <form action="../Details Rumah Sakit/DetailsRumahSakit.php" method="get">
-                                                        <input type="hidden" value="<?php echo $dataHospital[$i]['name'] ?>" name="namaRS">
-                                                        <input type="hidden" value="<?php echo $dataHospital[$i]['id'] ?>" name="idRumahSakit">
-                                                        <input type="hidden" value="<?php echo $type ?>" name="covidOrNonCovid">
-                                                        <button type="submit" class="buttonHospitalInformation">
-                                                            <a>Details</a>
-                                                        </button>    
-                                                    </form>  
+                                                    <button class="buttonHospitalInformation">
+                                                        <a href="https://www.google.co.id/maps/search/<?php echo $dataHospital[$i]['name'];?>">Details</a>
+                                                    </button>    
                                                 </div>
                                             </div>   
                                         </div>
                                     </div>
-                                </div>
-                                <?php    }    // punyanya for data hospital 2
-                                ?>
-                                
-                            <?php
-                            }
-                            ?>
-                        </div>
+                                </div> -->
                     </div>
-
                 </div>
-            </div>
-        </main>
 
-        <!-- Option 1: Bootstrap Bundle with Popper -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
-    </body>
+            </div>
+        </div>
+    </main>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
 </html>

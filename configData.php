@@ -130,4 +130,11 @@
         $errorKota = "kodeKota Salah";
         return  $errorKota;
     }
+    function getDetailRS ($idRS,$type){
+        $apiGetDetailRS = "https://rs-bed-covid-api.vercel.app/api/get-bed-detail?hospitalid=$idRS&type=$type";
+        $kontenDetail = file_get_contents($apiGetDetailRS);
+        $data = json_decode($kontenDetail,true);
+        $dataDetails = $data['data'];
+        return $dataDetails;
+    }
 ?>
