@@ -8,13 +8,12 @@ body {
 
 .detailsRumahSakit-title {
     margin-top: 3rem;
-    border: 1px solid black;
+    font-weight: 600;
 }
 
 .detailsRumahSakit-content {
     margin-left: 15%;
     margin-right: 15%;
-    border: 1px solid black;
 }
 
 .navInformation {
@@ -34,4 +33,84 @@ body {
     color: white;
     font-weight: 500;
     padding-left: 5px;
+}
+
+.buttonHospitalInformation {
+    height: 35px;
+    width: 90px;
+    margin-left: 1em;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 6px;
+    color: rgb(129, 152, 255);
+}
+
+.buttonHospitalInformation a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.rowGoTo {
+    margin-left: 5em;
+}
+
+.card {
+    border-radius: 6px;
+    width: auto;
+    margin: 0.5em 5em;
+    float: none;
+    border: none;
+    background-color: transparent;
+    box-shadow: 1px 1px 10px #d4cece;
+}
+
+.buttonDropDown {
+    box-shadow: 1px 1px 10px #d4cece;
+    text-align: left;
+    border: none;
+    height: 70px;
+    background-color: transparent;
+}
+
+.bedTitle {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.timeUpdate {
+    margin-top: -1rem;
+    font-size: 16px;
+}
+
+.dropDownIcon {
+    margin-top: 1.5rem;
+    font-size: 16px;
+}
+
+.cardDetailsCollapse {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+}
+
+.cardBed {
+    width: 130px;
+    margin-left: 2.5rem;
+}
+
+.informationCategory {
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 1400px) {
+}
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 992px) {
+}
+@media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 576px) {
 }

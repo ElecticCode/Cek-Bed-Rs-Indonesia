@@ -35,7 +35,7 @@
 
         <main>
             <div id="detailsRumahSakit">
-                <div class="container" style="border: 1px solid red;">
+                <div class="container">
                     <div class="detailsRumahSakit-content row">
                         <div class="navInformation">
                             <h1 class="detailsRumahSakit-title">
@@ -47,57 +47,80 @@
                             <h6>
                                 <?php echo $dataDetails['address'] ?>
                             </h6>
-                            <button class="buttonCall">
-                                <i class="fas fa-phone"></i>
-                                <a href="tel:<?php echo $dataDetails['phone']?>">
-                                    <?php echo $dataDetails['phone']?>
-                                </a>
-                            </button>
+                            <div class="row rowGoTo">
+                                <button class="buttonCall">
+                                    <i class="fas fa-phone"></i>
+                                    <a href="tel:<?php echo $dataDetails['phone']?>">
+                                        <?php echo $dataDetails['phone']?>
+                                    </a>
+                                </button>
+                                <button class="buttonHospitalInformation">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <a href="https://www.google.co.id/maps/search/<?php echo $dataDetails['name'];?>">Maps</a>
+                                </button>
+                            </div>
+                            
                         </div>
                         <?php 
                             for ($i=0; $i < count($dataDetails['bedDetail']); $i++) { ?>
-                                <div class="card">
-                                    <div class="card-body row">
-                                        <button
-                                            class="btn btn-primary"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#collapseExample<?php echo $i ?>"
-                                            aria-expanded="false"
-                                            aria-controls="collapseExample<?php echo $i ?>">
-                                            <h4>
-                                                <?php echo $dataDetails['bedDetail'][$i]['stats']['title'] ?>
-                                            </h4>
-                                            <h6>
-                                                <?php  echo $dataDetails['bedDetail'][$i]['time']?>
-                                            </h6>
-                                        </button>
-                                    </div>
-                                    <div class="collapse" id="collapseExample<?php echo $i ?>">
-                                        <div class="card card-body">
-                                            <div class="row">
-                                                <div class="col-4">
-                                                    <h6>Bed Tersedia</h6>
-                                                    <h6>
-                                                        <?php echo  $dataDetails['bedDetail'][$i]['stats']['bed_available']?>
-                                                    </h6>
+                                <div class="detailsInformation">
+                                    <div class="card">
+                                        <div class="card-body row">
+                                            <button
+                                                class="buttonDropDown"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseExample<?php echo $i ?>"
+                                                aria-expanded="false"
+                                                aria-controls="collapseExample<?php echo $i ?>">
+                                                <div class="row">
+                                                    <div class="col-11">
+                                                        <p class="bedTitle">
+                                                            <?php echo $dataDetails['bedDetail'][$i]['stats']['title'] ?>
+                                                        </p>
+                                                        <p class="timeUpdate">
+                                                            <?php  echo $dataDetails['bedDetail'][$i]['time']?>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-1 dropDownIcon">
+                                                        <i class="fas fa-chevron-circle-down"></i>
+                                                    </div>
                                                 </div>
-                                                <div class="col-4">
-                                                    <h6>Bed Kosong</h6>
-                                                    <h6>
-                                                        <?php echo  $dataDetails['bedDetail'][$i]['stats']['bed_empty']?>
-                                                    </h6>
-                                                </div>
-                                                <div class="col-4">
-                                                    <h6>Antrian</h6>
-                                                    <h6>
-                                                        <?php echo  $dataDetails['bedDetail'][$i]['stats']['queue']?>
-                                                    </h6>
+                                            </button>
+                                        </div>
+                                        <div class="collapse" id="collapseExample<?php echo $i ?>">
+                                            <div class="card-body">
+                                                <div class="row cardDetailsCollapse">
+                                                    <div class="col-4">
+                                                        <div class="cardBed bedTersedia">
+                                                            <h6 class="informationCategory">Bed Tersedia</h6>
+                                                            <h6>
+                                                                <?php echo  $dataDetails['bedDetail'][$i]['stats']['bed_available']?>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="cardBed bedKosong">
+                                                            <h6 class="informationCategory">Bed Kosong</h6>
+                                                            <h6>
+                                                                <?php echo  $dataDetails['bedDetail'][$i]['stats']['bed_empty']?>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="cardBed bedAntri">
+                                                            <h6 class="informationCategory">Antrian</h6>
+                                                            <h6>
+                                                                <?php echo  $dataDetails['bedDetail'][$i]['stats']['queue']?>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                
                         <?php    }
                         ?>
                     </div>

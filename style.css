@@ -134,6 +134,7 @@ body {
     }
     .GetLocation-Desc {
         font-size: 15px;
+        text-align: justify;
     }
     .form-container {
         padding-left: 15px;
@@ -152,5 +153,6 @@ body {
         width: 45%;
         font-size: 13px;
     }
+    
 }
 /* end of responsive  */
