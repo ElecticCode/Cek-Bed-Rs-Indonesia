@@ -177,3 +177,12 @@ body {
         display: none;
     }
 }
+
+@media only screen and (max-width: 350px) {
+    .bedTitle{
+        font-size: 15px;
+    }
+    .timeUpdate{
+        font-size: 13px;
+    }
+}
