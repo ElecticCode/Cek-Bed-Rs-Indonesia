@@ -25,6 +25,7 @@ body {
     height: 35px;
     color: white;
     border-radius: 6px;
+    margin-left: 0.5em;
     background-color: rgb(129, 152, 255);
 }
 
@@ -38,7 +39,6 @@ body {
 .buttonHospitalInformation {
     height: 35px;
     width: 90px;
-    margin-left: 1em;
     background-color: transparent;
     border: 1px solid black;
     border-radius: 6px;
@@ -54,18 +54,19 @@ body {
     margin-top: 0.5em;
     width: auto;
     height: 35px;
+    margin-left: 5em;
     background-color: transparent;
     border: 1px solid black;
     border-radius: 6px;
     color: rgb(129, 152, 255);
     text-decoration: none;
     font-weight: 500;
-    margin-left: -485px;
 }
 
 .rowGoTo {
     margin-top: 1em;
-    margin-left: 5em;
+    margin-left: 4em;
+    margin-right: 4em;
 }
 
 .card {
@@ -105,7 +106,6 @@ body {
     text-align: center;
     justify-content: center;
     align-items: center;
-
     display: flex;
 }
 
@@ -119,12 +119,61 @@ body {
 }
 
 @media only screen and (max-width: 1400px) {
+    .buttonHospitalInformation {
+        margin-left: 6em;
+    }
+    .buttonBacktoSearch {
+        font-size: 14px;
+    }
 }
 @media only screen and (max-width: 1200px) {
+    .buttonCall {
+        margin-left: 0rem;
+        width: 100%;
+    }
+    .buttonHospitalInformation {
+        width: 100%;
+        margin-left: 0rem;
+    }
+    .buttonBacktoSearch {
+        width: 100%;
+        margin-left: 0em;
+    }
+    .cardBed {
+        margin-left: 0rem;
+    }
 }
 @media only screen and (max-width: 992px) {
+    .card {
+        margin: 0.5em 0em;
+    }
+    .rowGoTo {
+        margin-left: 0em;
+        margin-right: 0em;
+    }
+    .buttonHospitalInformation {
+        margin-top: 0.5em;
+    }
 }
 @media only screen and (max-width: 768px) {
 }
 @media only screen and (max-width: 576px) {
+    .detailsRumahSakit-content {
+        margin-left: -0.5em;
+        width: 104%;
+    }
+    .card{
+        margin: 0.5em 1em;
+    }
+    .cardDetailsCollapse{
+        text-align: center;
+    }
+    .cardBed{
+        width: auto;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .dropDownIcon{
+        display: none;
+    }
 }

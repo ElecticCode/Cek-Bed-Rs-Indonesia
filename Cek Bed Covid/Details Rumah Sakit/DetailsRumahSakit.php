@@ -50,26 +50,32 @@
                                 <?php echo $dataDetails['address'] ?>
                             </h6>
                             <div class="row rowGoTo">
-                                <button class="buttonCall">
-                                    <i class="fas fa-phone"></i>
-                                    <a href="tel:<?php echo $dataDetails['phone']?>">
-                                        <?php echo $dataDetails['phone']?>
-                                    </a>
-                                </button>
-                                <button class="buttonHospitalInformation">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <a
-                                        href="https://www.google.co.id/maps/search/<?php echo $dataDetails['name'];?>">Maps</a>
-                                </button>
+                                <div class="col-xl-2 col-lg-6">
+                                    <button class="buttonCall">
+                                        <i class="fas fa-phone"></i>
+                                        <a href="tel:<?php echo $dataDetails['phone']?>">
+                                            <?php echo $dataDetails['phone']?>
+                                        </a>
+                                    </button>
+                                </div>
+                                <div class="col-xl-4 col-lg-6">
+                                    <button class="buttonHospitalInformation">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <a
+                                            href="https://www.google.co.id/maps/search/<?php echo $dataDetails['name'];?>">Maps</a>
+                                    </button>
+                                </div>
+                                <div class="col-xl-6 col-lg-12">
+                                    <form action="../Cek Bed Covid/DaftarRumahSakit.php" method="get">
+                                        <input type="hidden" value="<?php echo $kodeProv ?>" name="provinsi">
+                                        <input type="hidden" value="<?php echo $kodeKota ?>" name="kota">
+                                        <input type="hidden" value="<?php echo $type ?>" name="type">
+                                        <button type="submit" class="buttonBacktoSearch">
+                                            Cari Rumah Sakit Lokasi Lain
+                                        </button>
+                                    </form>
+                                </div>
                             </div>
-                            <form action="../Cek Bed Covid/DaftarRumahSakit.php" method="get">
-                                <input type="hidden" value="<?php echo $kodeProv ?>" name="provinsi">
-                                <input type="hidden" value="<?php echo $kodeKota ?>" name="kota">
-                                <input type="hidden" value="<?php echo $type ?>" name="type">
-                                <button type="submit" class="buttonBacktoSearch">
-                                    Cari Rumah Sakit Lokasi Lain
-                                </button>
-                            </form>
                         </div>
                         <?php 
                             for ($i=0; $i < count($dataDetails['bedDetail']); $i++) { ?>
@@ -101,7 +107,7 @@
                                 <div class="collapse" id="collapseExample<?php echo $i ?>">
                                     <div class="card-body">
                                         <div class="row cardDetailsCollapse">
-                                            <div class="col-4">
+                                            <div class="col-md-4">
                                                 <div class="cardBed bedTersedia">
                                                     <h6 class="informationCategory">Bed Tersedia</h6>
                                                     <h6>
@@ -109,7 +115,7 @@
                                                     </h6>
                                                 </div>
                                             </div>
-                                            <div class="col-4">
+                                            <div class="col-md-4">
                                                 <div class="cardBed bedKosong">
                                                     <h6 class="informationCategory">Bed Kosong</h6>
                                                     <h6>
@@ -117,7 +123,7 @@
                                                     </h6>
                                                 </div>
                                             </div>
-                                            <div class="col-4">
+                                            <div class="col-md-4">
                                                 <div class="cardBed bedAntri">
                                                     <h6 class="informationCategory">Antrian</h6>
                                                     <h6>

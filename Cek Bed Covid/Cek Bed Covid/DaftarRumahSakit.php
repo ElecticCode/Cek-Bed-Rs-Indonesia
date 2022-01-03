@@ -57,7 +57,7 @@
                             <?php } ?>  
                         </div>
                         <button class="buttonBacktoSearch">
-                            <a href="../Get Location Option/GetLocation.php">Cari Rumah Sakit Lokasi Lain</a>
+                            <a href="../Get Location Option/GetLocation.php">Cari Lokasi Lain</a>
                         </button>
                         <div id="daftarRumahSakit">
                             <?php 
@@ -155,27 +155,27 @@
                                     for ($i=0; $i < count($dataHospital); $i++) { ?>
                                 <div class="card">
                                     <div class="card-body row">
-                                        <div class="col-8">
-                                            <h5>
+                                        <div class="col-md-8">
+                                            <h5 class="hospitalName">
                                                 <?php echo $dataHospital[$i]['name']; ?>
                                             </h5>
-                                            <h6>
+                                            <h6 class="hospitalAddress">
                                                 <?php echo $dataHospital[$i]['address']; ?>
                                             </h6>
-                                            <h6>
+                                            <h6 class="infoUpdate">
                                             <?php
                                                 echo $dataHospital[$i]['available_beds'][0]['info'];
                                             ?>
                                             </h6>
                                         </div>
-                                        <div class="col-4">
+                                        <div class="col-md-4 row1-rightSide">
                                             <?php 
                                                 $availabel = $dataHospital[$i]['available_beds'][0]['available'];
                                                 if ($availabel > 0) { ?>
-                                                    <h6>
+                                                    <h6 class="informasiTersedia">
                                                         Tersedia, <span><?php echo $dataHospital[$i]['available_beds'][0]['bed_class']?></span>
                                                     </h6>
-                                                    <h6>
+                                                    <h6 class="noAvailability">
                                                     <?php
                                                         echo $dataHospital[$i]['available_beds'][0]['available'];
                                                     ?>
