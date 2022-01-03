@@ -22,13 +22,13 @@ body {
 
 .buttonBacktoSearch {
     margin-top: 1em;
-    margin-left: 6em;
+    margin-left: 5.15em;
     width: auto;
     height: 35px;
-    background-color: transparent;
+    /* background-color: transparent;
     border: 1px solid black;
     border-radius: 6px;
-    color: rgb(129, 152, 255);
+    color: rgb(129, 152, 255);*/
 }
 
 .buttonBacktoSearch a {
@@ -37,11 +37,11 @@ body {
 }
 
 .card {
-    border-radius: 6px;
+    /* border-radius: 6px; */
     width: auto;
-    margin: 0.5em 5em;
+    margin: 0.7em 5em;
     float: none;
-    border: 0.4px solid black;
+    /* border: 0.4px solid black; */
     background-color: transparent;
     box-shadow: 1px 1px 10px #d4cece;
 }
@@ -78,7 +78,7 @@ body {
     height: 35px;
     color: white;
     border-radius: 6px;
-    background-color: rgb(129, 152, 255);
+    /* background-color: rgb(129, 152, 255); */
 }
 
 .buttonCall a {
@@ -96,10 +96,10 @@ body {
 .buttonHospitalInformation {
     height: 35px;
     width: 90px;
-    background-color: transparent;
-    border: 1px solid black;
+    /* background-color: transparent;
+     border: 1px solid black;
     border-radius: 6px;
-    color: rgb(129, 152, 255);
+    color: rgb(129, 152, 255); */
 }
 
 .buttonHospitalInformation a {
@@ -174,7 +174,8 @@ body {
         width: 100%;
     }
     .row2-rightSide {
-        float: left;
+        /* float: left; */
+        padding: auto;
         width: auto;
         margin-top: 0.5em;
     }

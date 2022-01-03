@@ -40,7 +40,7 @@
 
                             <input type="radio" id="NonCovid-Option" name="type" value="2" >
                             <label for="NonCovid-Option">
-                                Non-Covid<i class="iconChecked fas fa-check"></i>
+                                Non-Covid  <i class="iconChecked fas fa-check"></i>
                             </label>
                         </div>
                         <div class="form-group">

@@ -56,9 +56,11 @@
                                 </h6> 
                             <?php } ?>  
                         </div>
-                        <button class="buttonBacktoSearch">
-                            <a href="../Get Location Option/GetLocation.php">Cari Lokasi Lain</a>
-                        </button>
+                        <a href="../../index.php">
+                            <button class="buttonBacktoSearch btn btn-primary text-white">
+                                Cari Lokasi Lain
+                            </button>
+                        </a>
                         <div id="daftarRumahSakit">
                             <?php 
                                 if ($type==1) { ?>
@@ -114,7 +116,7 @@
                                     </div>
                                     <div class="card-body row card-row2">
                                         <div class="col-md-6">
-                                            <button class="buttonCall">
+                                            <button class="buttonCall btn btn-primary">
                                                 <i class="fas fa-phone"></i>
                                                 <a href="tel:<?php echo $dataHospital[$i]['phone']?>">
                                                     <?php echo $dataHospital[$i]['phone']?>
@@ -122,12 +124,13 @@
                                             </button>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="row row2-rightSide">
+                                            <div class="row row2-rightSide ">
                                                 <div class="col-6">
-                                                    <button class="buttonHospitalInformation">
-                                                        <i class="fas fa-map-marker-alt"></i>
-                                                        <a href="https://www.google.co.id/maps/search/<?php echo $dataHospital[$i]['name'];?>">Maps</a>
-                                                    </button>
+                                                    <a href="https://www.google.co.id/maps/search/<?php echo $dataHospital[$i]['name'];?>">
+                                                        <button class="buttonHospitalInformation btn btn-primary">
+                                                            Maps <i class="fas fa-map-marker-alt"></i>
+                                                        </button>
+                                                    </a>
                                                 </div>
                                                 <div class="col-6 buttonInformasiRight">
                                                     <form action="../Details Rumah Sakit/DetailsRumahSakit.php" method="get">
@@ -135,9 +138,11 @@
                                                         <input type="hidden" value="<?php echo $kodeKota ?>" name="kota">
                                                         <input type="hidden" value="<?php echo $dataHospital[$i]['id'] ?>" name="idRumahSakit">
                                                         <input type="hidden" value="<?php echo $type ?>" name="type">
-                                                        <button type="submit" class="buttonHospitalInformation">
-                                                            <a class="linkDetails">Details</a>
-                                                        </button>    
+                                                        <a class="linkDetails">
+                                                            <button type="submit" class="buttonHospitalInformation btn btn-primary">
+                                                                Detail
+                                                            </button>    
+                                                        </a>
                                                     </form>
                                                 </div>
                                             </div>   
@@ -190,20 +195,20 @@
                                     </div>
                                     <div class="card-body row card-row2">
                                         <div class="col-md-6">
-                                            <button class="buttonCall">
-                                                <i class="fas fa-phone"></i>
-                                                <a href="tel:<?php echo $dataHospital[$i]['phone']?>">
-                                                    <?php echo $dataHospital[$i]['phone']?>
-                                                </a>    
+                                        <a href="tel:<?php echo $dataHospital[$i]['phone']?>">
+                                            <button class="buttonCall btn btn-primary">
+                                            <i class="fas fa-phone"></i> <?php echo $dataHospital[$i]['phone']?>
                                             </button>
+                                        </a>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="row row2-rightSide">
                                                 <div class="col-6">
-                                                    <button class="buttonHospitalInformation">
-                                                        <i class="fas fa-map-marker-alt"></i>
-                                                        <a href="https://www.google.co.id/maps/search/<?php echo $dataHospital[$i]['name'];?>">Maps</a>
-                                                    </button>
+                                                    <a href="https://www.google.co.id/maps/search/<?php echo $dataHospital[$i]['name'];?>">
+                                                        <button class="buttonHospitalInformation btn btn-primary">
+                                                            Maps <i class="fas fa-map-marker-alt"></i>
+                                                        </button>
+                                                    </a>
                                                 </div>
                                                 <div class="col-6 buttonInformasiRight">
                                                     <form action="../Details Rumah Sakit/DetailsRumahSakit.php" method="get">
@@ -211,9 +216,11 @@
                                                         <input type="hidden" value="<?php echo $kodeKota ?>" name="kota">
                                                         <input type="hidden" value="<?php echo $dataHospital[$i]['id'] ?>" name="idRumahSakit">
                                                         <input type="hidden" value="<?php echo $type ?>" name="type">
-                                                        <button type="submit" class="buttonHospitalInformation">
-                                                            <a>Details</a>
-                                                        </button>    
+                                                        <a>
+                                                            <button type="submit" class="buttonHospitalInformation btn btn-primary">
+                                                                Details
+                                                            </button>   
+                                                        </a> 
                                                     </form>  
                                                 </div>
                                             </div>   

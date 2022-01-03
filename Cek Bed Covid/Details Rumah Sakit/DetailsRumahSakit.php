@@ -51,26 +51,25 @@
                             </h6>
                             <div class="row rowGoTo">
                                 <div class="col-xl-2 col-lg-6">
-                                    <button class="buttonCall">
-                                        <i class="fas fa-phone"></i>
-                                        <a href="tel:<?php echo $dataDetails['phone']?>">
-                                            <?php echo $dataDetails['phone']?>
-                                        </a>
-                                    </button>
+                                    <a href="tel:<?php echo $dataDetails['phone']?>">
+                                        <button class="buttonCall btn btn-primary">
+                                            <i class="fas fa-phone"></i> <?php echo $dataDetails['phone']?>
+                                        </button>
+                                    </a>
                                 </div>
                                 <div class="col-xl-4 col-lg-6">
-                                    <button class="buttonHospitalInformation">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <a
-                                            href="https://www.google.co.id/maps/search/<?php echo $dataDetails['name'];?>">Maps</a>
-                                    </button>
+                                    <a href="https://www.google.co.id/maps/search/<?php echo $dataDetails['name'];?>">
+                                        <button class="buttonHospitalInformation btn btn-primary">
+                                            Maps <i class="fas fa-map-marker-alt"></i> 
+                                        </button>
+                                    </a>
                                 </div>
                                 <div class="col-xl-6 col-lg-12">
                                     <form action="../Cek Bed Covid/DaftarRumahSakit.php" method="get">
                                         <input type="hidden" value="<?php echo $kodeProv ?>" name="provinsi">
                                         <input type="hidden" value="<?php echo $kodeKota ?>" name="kota">
                                         <input type="hidden" value="<?php echo $type ?>" name="type">
-                                        <button type="submit" class="buttonBacktoSearch">
+                                        <button type="submit" class="buttonBacktoSearch btn btn-primary">
                                             Cari Rumah Sakit Lokasi Lain
                                         </button>
                                     </form>

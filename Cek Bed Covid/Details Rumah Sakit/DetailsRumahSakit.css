@@ -23,10 +23,10 @@ body {
 .buttonCall {
     width: 180px;
     height: 35px;
-    color: white;
+    /* color: white;
     border-radius: 6px;
     margin-left: 0.5em;
-    background-color: rgb(129, 152, 255);
+    background-color: rgb(129, 152, 255); */
 }
 
 .buttonCall a {
@@ -39,10 +39,10 @@ body {
 .buttonHospitalInformation {
     height: 35px;
     width: 90px;
-    background-color: transparent;
-    border: 1px solid black;
+    /* background-color: transparent; */
+    /* border: 1px solid black;
     border-radius: 6px;
-    color: rgb(129, 152, 255);
+    color: rgb(129, 152, 255); */
 }
 
 .buttonHospitalInformation a {
@@ -55,10 +55,10 @@ body {
     width: auto;
     height: 35px;
     margin-left: 5em;
-    background-color: transparent;
-    border: 1px solid black;
-    border-radius: 6px;
-    color: rgb(129, 152, 255);
+    /* background-color: transparent; */
+    /* border: 1px solid black;
+    border-radius: 6px; */
+    /* color: rgb(129, 152, 255); */
     text-decoration: none;
     font-weight: 500;
 }
