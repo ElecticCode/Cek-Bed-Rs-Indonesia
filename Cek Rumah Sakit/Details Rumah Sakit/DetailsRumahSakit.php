@@ -22,7 +22,11 @@
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
             crossorigin="anonymous">
 
+        <!-- link css details rumah sakit  -->
         <link rel="stylesheet" href="DetailsRumahSakit.css">
+
+        <!-- link css footer  -->
+        <link rel="stylesheet" href="../../footer.css">
 
         <!-- Fontawesome CSS -->
         <link
@@ -141,6 +145,13 @@
                     </div>
                 </div>
             </div>
+            <footer>
+                <div class="container">
+                    <p>Design and Developed by
+                        <span>Electic Code</span>
+                        @Covid Editon</p>
+                </div>
+            </footer>
         </main>
 
         <!-- Option 1: Bootstrap Bundle with Popper -->

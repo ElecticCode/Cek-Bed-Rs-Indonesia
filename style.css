@@ -8,7 +8,7 @@ body {
 #GetLocation {
     font-family: "Poppins", sans-serif;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,14 +78,10 @@ body {
     height: 45px;
 }
 
-.spinLoad {
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #3498db;
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
-    animation: spin 2s linear infinite;
+.buttonKirim {
+    border-radius: 6px;
+    width: 100px;
+    height: 35px;
 }
 
 /* Safari */
@@ -153,6 +149,5 @@ body {
         width: 45%;
         font-size: 13px;
     }
-    
 }
 /* end of responsive  */

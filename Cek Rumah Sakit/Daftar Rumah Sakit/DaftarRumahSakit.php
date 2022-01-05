@@ -33,6 +33,9 @@
         <!-- link css bed covid -->
         <link rel="stylesheet" href="DaftarRumahSakit.css">
 
+        <!-- link footer -->
+        <link rel="stylesheet" href="../../footer.css">
+
         <!-- Fontawesome CSS -->
         <link
             rel="stylesheet"
@@ -201,7 +204,7 @@
                                             </button>
                                         </a>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-6" style="background-color: red;">
                                             <div class="row row2-rightSide">
                                                 <div class="col-6">
                                                     <a href="https://www.google.co.id/maps/search/<?php echo $dataHospital[$i]['name'];?>">
@@ -238,6 +241,13 @@
 
                 </div>
             </div>
+            <footer>
+                <div class="container">
+                    <p>Design and Developed by
+                        <span>Electic Code</span>
+                        @Covid Editon</p>
+                </div>
+            </footer>
         </main>
 
         <!-- Option 1: Bootstrap Bundle with Popper -->

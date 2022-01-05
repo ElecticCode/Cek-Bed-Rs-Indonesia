@@ -6,6 +6,11 @@ body {
     background-color: #f0f8ff;
 }
 
+#detailsRumahSakit {
+    min-height: 100vh;
+    padding-bottom: 1rem;
+}
+
 .detailsRumahSakit-title {
     margin-top: 3rem;
     font-weight: 600;
@@ -83,7 +88,8 @@ body {
     box-shadow: 1px 1px 10px #d4cece;
     text-align: left;
     border: none;
-    height: 70px;
+    height: auto;
+    min-height: 70px;
     background-color: transparent;
 }
 
@@ -162,27 +168,27 @@ body {
         margin-left: -0.5em;
         width: 104%;
     }
-    .card{
+    .card {
         margin: 0.5em 1em;
     }
-    .cardDetailsCollapse{
+    .cardDetailsCollapse {
         text-align: center;
     }
-    .cardBed{
+    .cardBed {
         width: auto;
     }
 }
 @media only screen and (max-width: 400px) {
-    .dropDownIcon{
+    .dropDownIcon {
         display: none;
     }
 }
 
 @media only screen and (max-width: 350px) {
-    .bedTitle{
+    .bedTitle {
         font-size: 15px;
     }
-    .timeUpdate{
+    .timeUpdate {
         font-size: 13px;
     }
 }

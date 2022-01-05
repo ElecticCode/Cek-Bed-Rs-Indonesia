@@ -6,6 +6,11 @@ body {
     background-color: #f0f8ff;
 }
 
+#daftarRumahSakit {
+    min-height: 100vh;
+    padding-bottom: 1rem;
+}
+
 .daftarRumahSakit-title {
     margin-top: 3rem;
     font-weight: 600;
@@ -177,6 +182,7 @@ body {
         /* float: left; */
         padding: auto;
         width: auto;
+        float: left;
         margin-top: 0.5em;
     }
     .buttonInformasiRight {
