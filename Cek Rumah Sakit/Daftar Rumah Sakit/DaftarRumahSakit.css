@@ -44,7 +44,7 @@ body {
 .card {
     /* border-radius: 6px; */
     width: auto;
-    margin: 0.7em 5em;
+    margin: 1em 5em;
     float: none;
     /* border: 0.4px solid black; */
     background-color: transparent;
@@ -152,7 +152,7 @@ body {
         margin-left: 0%;
     }
     .card {
-        margin: 0.5em 2em;
+        margin: 1em 2em;
     }
     .buttonBacktoSearch {
         margin-left: 3rem;
@@ -169,7 +169,7 @@ body {
     }
     .card {
         margin: 0em 0em;
-        margin-top: 0.5em;
+        margin-top: 1em;
         width: 100%;
     }
     .card-row2 {

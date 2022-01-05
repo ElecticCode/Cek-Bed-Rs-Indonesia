@@ -108,6 +108,10 @@ body {
     font-size: 16px;
 }
 
+.card {
+    margin: 1em 1em;
+}
+
 .cardDetailsCollapse {
     text-align: center;
     justify-content: center;
@@ -169,7 +173,7 @@ body {
         width: 104%;
     }
     .card {
-        margin: 0.5em 1em;
+        margin: 1em 1em;
     }
     .cardDetailsCollapse {
         text-align: center;
