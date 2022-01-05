@@ -31,7 +31,7 @@
                 <p class="GetLocation-Title">Cek Ketersediaan Bed <br> Rumah Sakit</p>
                 <div class="form-container">
                     <p class="GetLocation-Desc">Pilih Lokasi Pengecekkan Ketersediaan Bed Rumah Sakit</p>
-                    <form action="Cek Bed Covid/Cek Bed Covid/DaftarRumahSakit.php" method="get">
+                    <form action="Cek Rumah Sakit/Daftar Rumah Sakit/DaftarRumahSakit.php" method="get">
                         <div class="radio-toolbar">
                             <input type="radio" id="Covid-Option" name="type" value="1" required>
                             <label for="Covid-Option">
@@ -66,7 +66,7 @@
                             <label for="kota">Select Kota</label>
                             <br>
                             <select required class="selectOption" name="kota" id="kota" require="require">
-                                <option value="">Select Kota</option>
+                                <option value="">Masukkan Provinsi Anda</option>
                             </select>
                         </div>
                         <button type="submit">kirimkan</button>
@@ -76,7 +76,7 @@
         </div>
         <script type="text/javascript">
             function getKota(idKota) {
-                $('#kota').html('<option>Tunggu Sebentar</option>')
+                $('#kota').html('<option>Sedang Mengambil Data Kota</option>')
                 $.ajax({
                     type: 'post',
                     url: 'configData.php',

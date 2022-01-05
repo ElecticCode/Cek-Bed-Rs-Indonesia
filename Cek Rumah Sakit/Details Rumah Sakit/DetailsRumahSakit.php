@@ -65,7 +65,7 @@
                                     </a>
                                 </div>
                                 <div class="col-xl-6 col-lg-12">
-                                    <form action="../Cek Bed Covid/DaftarRumahSakit.php" method="get">
+                                    <form action="../Daftar Rumah Sakit/DaftarRumahSakit.php" method="get">
                                         <input type="hidden" value="<?php echo $kodeProv ?>" name="provinsi">
                                         <input type="hidden" value="<?php echo $kodeKota ?>" name="kota">
                                         <input type="hidden" value="<?php echo $type ?>" name="type">
